@@ -7,16 +7,17 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({Key key}) : super(key: key);
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Awesome Recipe Book',
       theme: ThemeData(
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
+          appBarTheme: AppBarTheme(color: Colors.white, elevation: 0),
+          visualDensity: VisualDensity.adaptivePlatformDensity),
       home: HomeScreen(),
     );
   }

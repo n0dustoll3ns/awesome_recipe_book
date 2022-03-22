@@ -6,9 +6,9 @@ class NavItem {
   final Widget destination;
 
   NavItem({
-    required this.id,
-    required this.icon,
-    required this.destination,
+    this.id,
+    this.icon,
+    this.destination,
   });
 
   bool destinationChecker() {
