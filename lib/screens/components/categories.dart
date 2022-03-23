@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
- import '../../constants.dart';
+import '../../constants.dart';
 import '../../size_config.dart';
 
 class Categories extends StatefulWidget {
+  
   const Categories({Key key}) : super(key: key);
 
   @override
+  
   State<Categories> createState() => _CategoriesState();
 }
 
 class _CategoriesState extends State<Categories> {
+
   List<String> categories = [
     "All",
     "Indian",
@@ -21,12 +24,16 @@ class _CategoriesState extends State<Categories> {
   int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: SizeConfig.defaultSize * 3.5,
-      child: ListView.builder(
-        itemCount: categories.length,
-        scrollDirection: Axis.horizontal,
-        itemBuilder: (context, index) => buildCategoryItem(index),
+    
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 5),
+      child: SizedBox(
+        height: SizeConfig.defaultSize * 3.5,
+        child: ListView.builder(
+          itemCount: categories.length,
+          scrollDirection: Axis.horizontal,
+          itemBuilder: (context, index) => buildCategoryItem(index),
+        ),
       ),
     );
   }
@@ -56,7 +63,9 @@ class _CategoriesState extends State<Categories> {
           categories[index],
           style: TextStyle(
             fontWeight: FontWeight.bold,
-            color: selectedIndex == index ? kPrimaryColor : const Color(0xFFC2C2B5),
+            color: selectedIndex == index
+                ? kPrimaryColor
+                : const Color(0xFFC2C2B5),
           ),
         ),
       ),
