@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Awesome Recipe Book',
       theme: ThemeData(
+          scaffoldBackgroundColor: Colors.white,
           appBarTheme: AppBarTheme(color: Colors.white, elevation: 0),
           visualDensity: VisualDensity.adaptivePlatformDensity),
       home: HomeScreen(),
