@@ -26,7 +26,7 @@ class _CategoriesState extends State<Categories> {
   Widget build(BuildContext context) {
     
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 5),
+      padding: EdgeInsets.symmetric(vertical: SizeConfig.defaultSize * 2),
       child: SizedBox(
         height: SizeConfig.defaultSize * 3.5,
         child: ListView.builder(
