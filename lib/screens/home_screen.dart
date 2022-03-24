@@ -1,7 +1,9 @@
-import 'package:awesome_recipe_book/screens/components/body.dart';
-import 'package:awesome_recipe_book/size_config.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+
+import '../components/custom_bottom_navigation_bar.dart';
+import '../size_config.dart';
+import 'components/body.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key key}) : super(key: key);
@@ -12,6 +14,8 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: buildAppBar(),
       body: Body(),
+      bottomNavigationBar: BottomNavigationBar(),
+ 
     );
   }
 
